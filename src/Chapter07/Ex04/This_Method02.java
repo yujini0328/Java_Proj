@@ -19,7 +19,6 @@ class Book{
 	Book(String bookname, String bookAuthor){
 		this(bookname);
 		this.bookAuthor = bookAuthor;
-		
 	}
 	// 매개변수 3개인 생성자 호출
 	Book(String bookname, String bookAuthor, int bookPrice){
