@@ -31,6 +31,7 @@ class Lion extends Animal{
 public class MethodOverriding02 {
 
 	public static void main(String[] args) {
+		Animal a1 = new Animal();
 		
 		// 1. Animal을 Animal 타입으로 객체화 
 		a1.Cry(); 			// Animal 클래스의 cry를 호출됨
