@@ -26,23 +26,25 @@ public class Ex02 {
 		avgMaxSpeed(arr);
 		// 현대자동차의 배열에 저장된 오일의 합을 출력
 		sumOil(arr);
+//		System.out.println("현대 자동차의 모든 오일의 전체 합계 : " + sumOil(arr));
 	}
 	void avgMaxSpeed (Car[] arr) {
 		int sum = 0;
-		int avg = 0;
+		double avg = 0.0;
 		for(Car c : arr) {
 			if(c instanceof Hcar) {
 				Hcar h = (Hcar) c;
 				sum += h.maxSpeed;
-				avg = sum/4;
+				avg = (double)(sum/arr.length);
 			}
 			
 		}
-		System.out.println("현대자동차에 등록된 모든 모델의 최대스피드의 평균은 " + avg + "입니다.");
+		System.out.printf("현대자동차에 등록된 모든 모델의 최대스피드의 평균은 %.2f입니다.\n", avg);
 	}
 	int sumOil(Car[] arr) {
 		int sum = 0;
 		for(Car c : arr) {
+			// 다운캐스팅
 			if(c instanceof Hcar) {
 				Hcar h = (Hcar) c;
 				sum += h.oilLitter;
